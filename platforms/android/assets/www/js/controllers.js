@@ -1,28 +1,21 @@
-angular.module('starter.controllers', [])
+angular.module('app.controllers', [])
 
-.controller('DashCtrl', function($scope) {})
+.controller('cameraTabDefaultPageCtrl', function($scope) {
 
-.controller('ChatsCtrl', function($scope, Chats) {
-  // With the new view caching in Ionic, Controllers are only called
-  // when they are recreated or on app start, instead of every page change.
-  // To listen for when this page is active (for example, to refresh data),
-  // listen for the $ionicView.enter event:
-  //
-  //$scope.$on('$ionicView.enter', function(e) {
-  //});
-
-  $scope.chats = Chats.all();
-  $scope.remove = function(chat) {
-    Chats.remove(chat);
-  };
 })
 
-.controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {
-  $scope.chat = Chats.get($stateParams.chatId);
+.controller('cartTabDefaultPageCtrl', function($scope) {
+
 })
 
-.controller('AccountCtrl', function($scope) {
-  $scope.settings = {
-    enableFriends: true
-  };
-});
+.controller('cloudTabDefaultPageCtrl', function($scope) {
+
+})
+
+.controller('loginCtrl', function($scope,$http) {
+  $http.get('https://www.linkedin.com/uas/oauth2/authorization?response_type=code&client_id=771u0p20ttoai5&redirect_uri=http://localhost:8100/#/page5')
+})
+
+.controller('nameOfPersonCtrl', function($scope) {
+
+})
