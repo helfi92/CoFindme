@@ -10,12 +10,12 @@ angular.module('app.routes', [])
     
       
         
-    .state('tabsController.cameraTabDefaultPage', {
+    .state('tabsController.coFindPage', {
       url: '/page2',
       views: {
         'tab1': {
-          templateUrl: 'templates/cameraTabDefaultPage.html',
-          controller: 'cameraTabDefaultPageCtrl'
+          templateUrl: 'templates/coFindPage.html',
+          controller: 'coFindController'
         }
       }
     })

@@ -1,0 +1,31 @@
+<ion-view title="Camera Tab Default Page">
+    <ion-content overflow-scroll="true" padding="true" class="has-header">
+        <form class="list">
+            <div class="button-bar"></div>
+            <label class="item item-input">
+                <i class="icon ion-search placeholder-icon"></i>
+                <input ng-model="search.$" type="search" placeholder="">
+            </label>
+        </form>
+        <div class="button-bar"></div>
+        <div class="list card">
+            <div class="item item-divider">Filter</div>
+            <div class="item item-body"></div>
+        </div>
+        <h4>Top 3 founders for you!</h4>
+        <div class="list">
+            <a ng-repeat="item in users | filter:search"class="item item-avatar" href="#">
+                <img ng-src="{{item.imageUrl}}">
+                <h2>{{item.profession}}, (Marketing, Technical)</h2>
+                <small style="color:lightgrey;">
+                    <i class="ion-location"></i> {{item.location}}</small>
+                <p><span ng-repeat="skill in item.skills"> {{skill}} | </span></p>
+            </a>
+
+            
+        </div>
+        <button class="button button-assertive button-clear button-block ">+ see more</button>
+        <div class="spacer" style="width: 300px; height: 48px;"></div>
+        <ion-list></ion-list>
+    </ion-content>
+</ion-view>
