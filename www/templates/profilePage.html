@@ -1,5 +1,32 @@
-<ion-view title="Cart Tab Default Page">
+<ion-view title="Hassan's Profile">
     <ion-content overflow-scroll="true" padding="true" class="has-header">
-		hello
+		<div id="profile-bg">
+			<img src="http://www.metapercept.com/wp-content/uploads/2015/02/linkedin.png">
+		</div>
+      	<div id="content">
+        	<div id="profile-info">
+	          <img id="profile-image" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAbzAAAAJDg5NDUxYjA5LTA5M2UtNDk1NC1hNmQ4LTM3MmVlZjZkZjVlOQ.jpg">
+	          <h3 id="profile-name">{{user.firstName}}</h3>
+	          <div id="profile-description">
+	          	<div>{{user.profession}}</div>
+	          	<div>{{user.location}}</div>
+	          </div>
+	          
+	         
+	      	</div>
+        </div>
+        <div id="skills-content">
+        	<h3 class="text-center">Skills</h3>
+        	<div class="list">
+
+			  <a ng-repeat="item in user.skills" class="item item-icon-left" href="#">
+			    <i class="icon ion-star"></i>
+			    {{item}}
+			  </a>			 
+			</div>
+        </div>
+        <div id="message-user">
+      	 	<button style="margin-top:1em;width:200px;"class="button button-calm text-center">Message</button>
+  		</div>
 	</ion-content>
 </ion-view>
