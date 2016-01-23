@@ -1,22 +1,22 @@
-angular.module('app.controllers', [])
+var ctrlApp = angular.module('app.controllers', []);
   
-.controller('cameraTabDefaultPageCtrl', function($scope) {
+ctrlApp.controller('cameraTabDefaultPageCtrl', function($scope) {
 
 })
    
-.controller('cartTabDefaultPageCtrl', function($scope) {
+// .controller('cartTabDefaultPageCtrl', function($scope) {
 
-})
+// })
    
-.controller('cloudTabDefaultPageCtrl', function($scope) {
+ctrlApp.controller('cloudTabDefaultPageCtrl', function($scope) {
 
 })
       
-.controller('loginCtrl', function($scope) {
+ctrlApp.controller('loginCtrl', function($scope) {
 
 })
    
-.controller('nameOfPersonCtrl', function($scope) {
+ctrlApp.controller('nameOfPersonCtrl', function($scope) {
 
 })
  

@@ -24,12 +24,12 @@ angular.module('app.routes', [])
     
       
         
-    .state('tabsController.cartTabDefaultPage', {
+    .state('tabsController.profilePage', {
       url: '/page3',
       views: {
         'tab2': {
-          templateUrl: 'templates/cartTabDefaultPage.html',
-          controller: 'cartTabDefaultPageCtrl'
+          templateUrl: 'templates/profilePage.html',
+          controller: 'profileCtrl'
         }
       }
     })
