@@ -1,4 +1,4 @@
-<ion-view title="Camera Tab Default Page">
+<ion-view title="CoFind">
     <ion-content overflow-scroll="true" padding="true" class="has-header">
         <form class="list">
             <div class="button-bar"></div>
@@ -14,7 +14,8 @@
         </div>
         <h4>Top 3 founders for you!</h4>
         <div class="list">
-            <a ng-repeat="item in users | filter:search"class="item item-avatar" href="#">
+            <a ng-repeat="item in users | filter:search"class="item item-avatar" href="#/page1/page2/{{item.id}}">
+                {{item.id}}
                 <img ng-src="{{item.imageUrl}}">
                 <h2>{{item.profession}}, (Marketing, Technical)</h2>
                 <small style="color:lightgrey;">
