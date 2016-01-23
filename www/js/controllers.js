@@ -12,13 +12,7 @@ angular.module('app.controllers', [])
 
 })
 
-.controller('loginCtrl', function($scope,$http) {
-  $scope.signin=function()
-  {
-    $http.get('https://www.linkedin.com/uas/oauth2/authorization',function(response){
-      console.log(response);
-    });
-  };
+.controller('loginCtrl', function($scope) {
 
 })
 
