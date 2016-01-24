@@ -12,7 +12,7 @@
 		</div>
     <div ng-show="profileOption=='myInfo'">
       <div>
-        <h4>Top Three Skills</h4>
+        <h4>Top Four Skills</h4>
 
         <label ng-repeat="skill in me.skills" class="item item-input">
           <input ng-model="skill" type="text">
@@ -20,8 +20,13 @@
         <button ng-click="addSkillOnClick()" id="add-skill-button" class="button button-positive button-fab button-fab-bottom-right">
                 <i class="icon ion-plus"></i>
         </button>
-          <h4>Top Three Technologies</h4>
-
+          <h4>Top Two Technologies</h4>
+          <label ng-repeat="industry in me.industries" class="item item-input">
+            <input ng-model="industry" type="text">
+          </label>
+        <button ng-click="addIndustryOnClick()" id="add-skill-button" class="button button-positive button-fab button-fab-bottom-right">
+                <i class="icon ion-plus"></i>
+        </button>
       </div>
       <div>
         <button class="button button-assertive button-block ">Update</button>

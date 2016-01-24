@@ -7,9 +7,11 @@
         	<div id="profile-info">
 	          <img id="profile-image" ng-src="{{user.imageUrl}}">
 	          <h3 id="profile-name">{{user.firstName}}</h3>
-	          <div id="profile-description">
-	          	<div>{{user.profession}}</div>
+	          <h3><span ng-repeat="industry in user.industries">{{industry}}{{$last ? '' : ','}} </span></h3>
+	          <div id="profile-description">	          	
+	          	
 	          	<div>{{user.location}}</div>
+
 	          </div>
 	          
 	         

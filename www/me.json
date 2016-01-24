@@ -1,1 +1,5 @@
-{"id":2,"email": "davidh@gmail.com","firstName":"David","profession":"Hacker","location" : "Montreal, Quebec, Canada","imageUrl" : "https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAASZAAAAJGE3NzMwNWE3LTk5MDMtNDQxNC04MTYxLWZhZTcyOWRkNTJkZQ.jpg","skills":["AngularUI","JQuery","CSS","Github"]}
+{ "email": "helfi92@gmail.com","skills": [ "Bootstrap", "OnsenIO", "JQuery", "AngularJS" ],
+    "industries": [ "Frontend", "Marketing" ],
+    "imageUrl": "https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAbzAAAAJDg5NDUxYjA5LTA5M2UtNDk1NC1hNmQ4LTM3MmVlZjZkZjVlOQ.jpg",
+    "firstName": "Hassan",
+    "location": "Brossard, Quebec, Canada" }

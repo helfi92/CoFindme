@@ -18,11 +18,71 @@ appCtrl.controller('coFindController', function($scope,$http,user,$location,$ion
 
   $http.get('users.json').success(function(data) {
     $scope.users = data;
+    console.log('users: ', $scope.users);
   });
 
   $scope.userOnClick = function(item){
   	console.log('user: ', item);
   	user.activeUser = item;
   }
+
+  //not working for more than 1 industry
+  $scope.constructFilter = function(){
+    var result = '';
+    for(var i = 0 ; i < $scope.industriesList.length ; i++){
+          if($scope.industriesList[i].isChecked == true){
+            if(!!!result.length){
+              result = $scope.industriesList[i].text;
+          }else{
+              result = result + " " + $scope.industriesList[i].text;    
+          }
+        }
+    
+    }  
+     
+    console.log('result: ', result);
+    $scope.filterIndustries = result;
+  }
+
+  //$scope.industriesList = ['Marketing','Frontend','Research','Management','Design'];
+
+  $scope.industriesList = [
+    {
+      text:'Marketing',
+      isChecked: false,
+    },
+    {
+      text:'Frontend',
+      isChecked: false,
+    },
+    {
+      text:'Research',
+      isChecked: false,
+    },
+    {
+      text:'Management',
+      isChecked: false,
+    },
+    {
+      text:'Design',
+      isChecked: false,
+    }
+
+
+  ]
+
+
+  $scope.filterObject = {
+    industries : 'Marketing'
+  }
+
+  $scope.addFilter = function(item,isChecked){
+    item.isChecked = isChecked;
+    console.log('item: ', item);
+    console.log('checkbox: ', isChecked);
+    $scope.constructFilter();
+  }
+
+
 
 });

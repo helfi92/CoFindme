@@ -16,9 +16,9 @@ appCtrl.controller('editCtrl',['$scope','$http','user', function($scope,$http,us
 
 	$scope.addSkillOnClick = function(){
 		$scope.me.skills.push('');
+	};
+	$scope.addIndustryOnClick = function(){
+		$scope.me.industries.push('');
 	}
-
-
-	console.log('active me: ', $scope.me);
 
 }]);
