@@ -26,10 +26,10 @@
         <div class="list">
             <a ng-click="userOnClick(item)" ng-repeat="item in users | filter:search" class="item item-avatar" href="#/page1/profile">
                 <img ng-src="{{item.imageUrl}}">
-                <h2>{{item.profession}}, (Marketing, Technical)</h2>
+                <h2><span ng-repeat="industry in item.industries">{{industry}}{{$last ? '' : ','}} </span></h2>
                 <small style="color:lightgrey;">
                     <i class="ion-location"></i> {{item.location}}</small>
-                <p><span ng-repeat="skill in item.skills"> {{skill}} | </span></p>
+                <p><span ng-repeat="skill in item.skills"> {{skill}} {{$last ? '' : '|'}} </span></p>
             </a>
 
             
