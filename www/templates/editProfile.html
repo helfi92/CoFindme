@@ -12,6 +12,11 @@
 			<label ng-repeat="skill in me.skills" class="item item-input">
 			  <input ng-model="skill" type="text">
 			</label>
+
+			<button ng-click="addSkillOnClick()" id="add-skill-button" class="button button-positive button-fab button-fab-bottom-right">
+            	<i class="icon ion-plus"></i>
+        	</button>
+
 		</div>
 		<div>
 			<button class="button button-assertive button-block ">Update</button>

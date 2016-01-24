@@ -7,6 +7,9 @@ appCtrl.controller('editCtrl',['$scope','$http','user', function($scope,$http,us
     	console.log("me!", $scope.me);
   	});
 
+	$scope.addSkillOnClick = function(){
+		$scope.me.skills.push('');
+	}
 	
 	
 	console.log('active me: ', $scope.me);
