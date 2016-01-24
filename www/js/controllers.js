@@ -1,24 +1,5 @@
 angular.module('app.controllers', [])
 
-.controller('cameraTabDefaultPageCtrl', function($scope,$rootScope,$http) {
-  console.log($rootScope.requestToken);
-  var accessToken=window.localStorage.getItem('AccessToken');
-
-  if(!$rootScope.requestToken||typeof $rootScope.requestToken!=='undefined')
-  {
-    if(accessToken)
-    {
-      $http({method:"get",url:"https://api.linkedin.com/v1/people/~?oauth2_access_token="+$rootScope.accessToken}).success(function(data)
-      {
-        console.log(data);
-      });
-    }else{
-      console.log('out nigga');
-    }
-  }
-
-})
-
 .controller('cartTabDefaultPageCtrl', function($scope) {
 
 })
@@ -36,10 +17,6 @@ angular.module('app.controllers', [])
       $rootScope.accessToken=accessToken;
       $location.path("/page1/page2");
     }
-
-
-
-
 
   $scope.login=function()
   {
@@ -74,14 +51,10 @@ angular.module('app.controllers', [])
 
             ref.close();
         }
-    });
-  };
+      });
+    }
 
-
-
-
-})
-
+  })
 .controller('nameOfPersonCtrl', function($scope) {
 
 })

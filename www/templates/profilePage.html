@@ -1,11 +1,11 @@
-<ion-view title="Hassan's Profile">
+<ion-view title="{{user.firstName}}'s Profile">
     <ion-content overflow-scroll="true" padding="true" class="has-header">
 		<div id="profile-bg">
 			<img src="http://www.metapercept.com/wp-content/uploads/2015/02/linkedin.png">
 		</div>
       	<div id="content">
         	<div id="profile-info">
-	          <img id="profile-image" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAbzAAAAJDg5NDUxYjA5LTA5M2UtNDk1NC1hNmQ4LTM3MmVlZjZkZjVlOQ.jpg">
+	          <img id="profile-image" ng-src="{{user.imageUrl}}">
 	          <h3 id="profile-name">{{user.firstName}}</h3>
 	          <div id="profile-description">
 	          	<div>{{user.profession}}</div>
@@ -20,7 +20,7 @@
         	<div class="list">
 
 			  <a ng-repeat="item in user.skills" class="item item-icon-left" href="#">
-			    <i class="icon ion-star"></i>
+			    <i class="icon ion-ios-pricetag-outline"></i>
 			    {{item}}
 			  </a>			 
 			</div>
