@@ -11,6 +11,9 @@ angular.module('app.controllers', [])
 })
 
 .controller('loginCtrl', function($scope,$http) {
+  $scope.go = function ( path ) {
+    $location.path( path );
+  };
   $http({
     method: 'GET',
     url: 'https://www.linkedin.com/uas/oauth2/authorization?response_type=code&client_id=771u0p20ttoai5&redirect_uri=http://localhost:8100&state=DCEeFWf45A53sdfKef424&scope=r_basicprofile'

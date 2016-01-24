@@ -10,9 +10,19 @@
         <div class="button-bar"></div>
         <div class="list card">
             <div class="item item-divider">Filter</div>
-            <div class="item item-body"></div>
+            <div class="item item-body">
+                <ion-list>
+
+                  <ion-checkbox ng-model="filter.blue">Front End</ion-checkbox>
+                  <ion-checkbox ng-model="filter.yellow">Graphic Designer</ion-checkbox>
+                  <ion-checkbox ng-model="filter.pink">Manager</ion-checkbox>
+
+                </ion-list>
+            </div>
         </div>
-        <h4>Top 3 founders for you!</h4>
+
+
+
         <div class="list">
             <a ng-click="userOnClick(item)" ng-repeat="item in users | filter:search" class="item item-avatar" href="#/page1/profile">
                 <img ng-src="{{item.imageUrl}}">
@@ -24,8 +34,6 @@
 
             
         </div>
-        <button class="button button-assertive button-clear button-block ">+ see more</button>
-        <div class="spacer" style="width: 300px; height: 48px;"></div>
-        <ion-list></ion-list>
+       
     </ion-content>
 </ion-view>
