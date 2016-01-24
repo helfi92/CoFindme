@@ -9145,3 +9145,10 @@ a.button {
 #message-user {
   text-align: center;
   padding-bottom: 1em; }
+
+#add-skill-button {
+  border-radius: 50%;
+  float: right;
+  bottom: 25px;
+  z-index: 2;
+  height: 50px; }
