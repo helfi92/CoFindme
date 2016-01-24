@@ -9,8 +9,15 @@ CoFindme specializes in the connection of technical cofounders. When interested 
 This application includes both iOS and Android platforms.
 
 
-
 ![Alt text](https://raw.githubusercontent.com/helfi92/CoFindme/master/www/img/1.png)
+
+
 ![Alt text](https://raw.githubusercontent.com/helfi92/CoFindme/master/www/img/2.png)
+
+
 ![Alt text](https://raw.githubusercontent.com/helfi92/CoFindme/master/www/img/3.png)
+
+
 ![Alt text](https://raw.githubusercontent.com/helfi92/CoFindme/master/www/img/4.png)
+
+
