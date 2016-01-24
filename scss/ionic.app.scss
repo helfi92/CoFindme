@@ -94,8 +94,10 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 
 }
 .remove-display{
-	display: none;
+	display: none !important;
 }
+
+
 ion-header-bar{
 	/*background-color:#e4473b !important;*/
 	background-color:#e42112 !important;

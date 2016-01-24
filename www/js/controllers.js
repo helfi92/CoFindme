@@ -1,4 +1,4 @@
-angular.module('app.controllers', ['ionic.rating'])
+angular.module('app.controllers', [])
 
 .controller('cartTabDefaultPageCtrl', function($scope) {
 
