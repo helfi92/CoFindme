@@ -12,7 +12,8 @@ angular.module('app.controllers', [])
   //window.open('https://www.linkedin.com/uas/oauth2/authorization?client_id=771u0p20ttoai5&…100%2F&response_type=code&scope=r_basicprofile&state=DCEeFWf45A53sdfKef424');
   $http.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
     var accessToken=window.localStorage.getItem('AccessToken');
-    if(typeof accessToken!=='undefined')
+    console.log(accessToken)
+    if(accessToken&&typeof(accessToken)!=='undefined')
     {
       $rootScope.accessToken=accessToken;
       $location.path("/page1/page2");
