@@ -1,49 +1,26 @@
 angular.module('app.controllers', [])
 
-.controller('cameraTabDefaultPageCtrl', function($scope,$rootScope,$http) {
-  console.log($rootScope.requestToken);
-  var accessToken=window.localStorage.getItem('AccessToken');
-
-  if(!$rootScope.requestToken||typeof $rootScope.requestToken!=='undefined')
-  {
-    if(accessToken)
-    {
-      $http({method:"get",url:"https://api.linkedin.com/v1/people/~?oauth2_access_token="+$rootScope.accessToken}).success(function(data)
-      {
-        console.log(data);
-      });
-    }else{
-      console.log('out nigga');
-    }
-  }
-
-})
-
 .controller('cartTabDefaultPageCtrl', function($scope) {
 
 })
 
-.controller('cloudTabDefaultPageCtrl', function($scope) {
 
-})
 
 .controller('loginCtrl', function($scope,$http,$rootScope,$location) {
   //window.open('https://www.linkedin.com/uas/oauth2/authorization?client_id=771u0p20ttoai5&…100%2F&response_type=code&scope=r_basicprofile&state=DCEeFWf45A53sdfKef424');
   $http.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
     var accessToken=window.localStorage.getItem('AccessToken');
-    if(typeof accessToken!=='undefined')
+    console.log(accessToken)
+    if(accessToken&&typeof(accessToken)!=='undefined')
     {
       $rootScope.accessToken=accessToken;
-      $location.path("/page1/page2");
+      $location.path("#/page1/page2");
     }
-
-
-
-
 
   $scope.login=function()
   {
-    if (typeof String.prototype.startsWith != 'function') {
+    $location.path('/page1/page2');
+    /*if (typeof String.prototype.startsWith != 'function') {
         String.prototype.startsWith = function (str){
             return this.indexOf(str) == 0;
         };
@@ -74,14 +51,10 @@ angular.module('app.controllers', [])
 
             ref.close();
         }
-    });
-  };
+      });*/
+    }
 
-
-
-
-})
-
+  })
 .controller('nameOfPersonCtrl', function($scope) {
 
 })

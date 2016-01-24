@@ -1,0 +1,39 @@
+<ion-view title="CoFind">
+    <ion-content overflow-scroll="true" padding="true" class="has-header">
+        <form class="list">
+            <div class="button-bar"></div>
+            <label class="item item-input">
+                <i class="icon ion-search placeholder-icon"></i>
+                <input ng-model="search.$" type="search" placeholder="">
+            </label>
+        </form>
+        <div class="button-bar"></div>
+        <div class="list card">
+            <div class="item item-divider">Filter</div>
+            <div class="item item-body">
+                <ion-list>
+
+                  <ion-checkbox ng-model="filter.blue">Front End</ion-checkbox>
+                  <ion-checkbox ng-model="filter.yellow">Graphic Designer</ion-checkbox>
+                  <ion-checkbox ng-model="filter.pink">Manager</ion-checkbox>
+
+                </ion-list>
+            </div>
+        </div>
+
+
+
+        <div class="list">
+            <a ng-click="userOnClick(item)" ng-repeat="item in users | filter:search" class="item item-avatar" href="#/page1/profile">
+                <img ng-src="{{item.imageUrl}}">
+                <h2>{{item.profession}}, (Marketing, Technical)</h2>
+                <small style="color:lightgrey;">
+                    <i class="ion-location"></i> {{item.location}}</small>
+                <p><span ng-repeat="skill in item.skills"> {{skill}} | </span></p>
+            </a>
+
+            
+        </div>
+       
+    </ion-content>
+</ion-view>

@@ -9145,3 +9145,21 @@ a.button {
 #message-user {
   text-align: center;
   padding-bottom: 1em; }
+
+#add-skill-button {
+  border-radius: 50%;
+  float: right;
+  bottom: 25px;
+  z-index: 2;
+  height: 50px;
+  right: 1em; }
+
+.remove-display {
+  display: none !important; }
+
+ion-header-bar {
+  /*background-color:#e4473b !important;*/
+  background-color: #e42112 !important; }
+
+div.title.title-left.header-item, div.title.title-center.header-item, button.button.back-button.buttons.button-icon.icon.ion-ios-arrow-back.header-item {
+  color: white; }
