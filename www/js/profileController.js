@@ -9,15 +9,6 @@ appCtrl.controller('profileCtrl',['$scope','$http','user', function($scope,$http
   	});
 	
 
-
-	$scope.getClass(option)
-	{
-		if($scope.profileOption=='myInfo'&&option=='myInfo')
-		{
-
-		}
-	}
-
 	$scope.user = user.activeUser;
 	console.log('active user: ', $scope.user);
 
