@@ -83,6 +83,17 @@ appCtrl.controller('coFindController', function($scope,$http,user,$location,$ion
     $scope.constructFilter();
   };
 
+  $scope.transition = '';
+  $scope.searchChanged = function(value){
+    console.log('hllo: ', value);
+    $scope.transition = '';
+    if(!!value){
+      console.log('search exist');
+      $scope.transition = 'animated fadeOutUp remove-display';
+    }else{
+      $scope.transition = 'animated fadeInDown';
+    }
+  }
 
 
  
