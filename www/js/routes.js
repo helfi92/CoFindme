@@ -38,8 +38,8 @@ angular.module('app.routes', [])
       url: '/editProfile',
       views: {
         'tab2': {
-          templateUrl: 'templates/testChild.html',
-          controller: 'profileCtrl'
+          templateUrl: 'templates/editProfile.html',
+          controller: 'editCtrl'
         }
       }
     })
