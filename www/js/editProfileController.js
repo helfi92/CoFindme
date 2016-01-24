@@ -6,7 +6,7 @@ appCtrl.controller('editCtrl',['$scope','$http','user', function($scope,$http,us
     $scope.me = data;
     	console.log("me!", $scope.me);
   	});
-		$scope.profileOption='lookingFor';
+		$scope.profileOption='myInfo';
 		$scope.$watch('profileOption',function(){
 			console.log('inside');
 			console.log($scope.profileOption);

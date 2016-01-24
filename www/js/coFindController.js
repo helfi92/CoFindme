@@ -81,7 +81,14 @@ appCtrl.controller('coFindController', function($scope,$http,user,$location,$ion
     console.log('item: ', item);
     console.log('checkbox: ', isChecked);
     $scope.constructFilter();
-  }
+  };
+
+
+
+ 
+
+
+  
 
 
 
