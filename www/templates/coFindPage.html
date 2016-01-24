@@ -19,9 +19,10 @@
                 </ion-list>
             </div>
         </div>
+         
+        
 
-
-
+    
         <div class="list">
             <a ng-click="userOnClick(item)" ng-repeat="item in users | filter:search.skills | filter : filterIndustries" class="item item-avatar" href="#/page1/profile">
                 <img ng-src="{{item.imageUrl}}">

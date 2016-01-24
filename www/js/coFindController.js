@@ -18,11 +18,9 @@ appCtrl.controller('coFindController', function($scope,$http,user,$location,$ion
 
   $http.get('users.json').success(function(data) {
     $scope.users = data;
-    console.log('users: ', $scope.users);
   });
 
   $scope.userOnClick = function(item){
-  	console.log('user: ', item);
   	user.activeUser = item;
   }
 
@@ -40,7 +38,6 @@ appCtrl.controller('coFindController', function($scope,$http,user,$location,$ion
     
     }  
      
-    console.log('result: ', result);
     $scope.filterIndustries = result;
   }
 
@@ -78,8 +75,6 @@ appCtrl.controller('coFindController', function($scope,$http,user,$location,$ion
 
   $scope.addFilter = function(item,isChecked){
     item.isChecked = isChecked;
-    console.log('item: ', item);
-    console.log('checkbox: ', isChecked);
     $scope.constructFilter();
   };
 
@@ -88,7 +83,6 @@ appCtrl.controller('coFindController', function($scope,$http,user,$location,$ion
     console.log('hllo: ', value);
     $scope.transition = '';
     if(!!value){
-      console.log('search exist');
       $scope.transition = 'animated fadeOutUp remove-display';
     }else{
       $scope.transition = 'animated fadeInDown';
@@ -96,7 +90,7 @@ appCtrl.controller('coFindController', function($scope,$http,user,$location,$ion
   }
 
 
- 
+  
 
 
   

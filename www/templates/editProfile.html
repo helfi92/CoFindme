@@ -4,7 +4,7 @@
         <button ng-class="(profileOption=='myInfo')?'button button-assertive':'button button-assertive button-outline'" ng-click="profileOption='myInfo'">My Info</input>
         <button ng-class="(profileOption=='lookingFor')?'button button-assertive':'button button-assertive button-outline'" ng-click="profileOption='lookingFor'">Looking For</a>
       </div>
-		<div ng-show="profileOption=='myInfo'">
+		<div ng-if="profileOption=='myInfo'">
       <div>
   			<h4>Email</h4>
   			<label class="item item-input">
@@ -37,21 +37,21 @@
 
 
 
-    <div ng-show="profileOption=='lookingFor'">
+    <div ng-if="profileOption=='lookingFor'">
      <div>
         <h4>Top Skills</h4>
 
         <label ng-repeat="skill in me.skills track by $index" class="item item-input">
           <input ng-model="skill" type="text">
         </label>
-        <button ng-click="addSkillOnClick()" id="add-skill-button" class="button button-positive button-fab button-fab-bottom-right">
+        <button ng-click="addSkillOnClick()" id="add-skill-button" class="button button-calm button-fab button-fab-bottom-right">
                 <i class="icon ion-plus"></i>
         </button>
           <h4>Top Technologies</h4>
           <label ng-repeat="industry in me.industries track by $index" class="item item-input">
             <input ng-model="industry" type="text">
           </label>
-        <button ng-click="addIndustryOnClick()" id="add-skill-button" class="button button-positive button-fab button-fab-bottom-right">
+        <button ng-click="addIndustryOnClick()" id="add-skill-button" class="button button-calm button-fab button-fab-bottom-right">
                 <i class="icon ion-plus"></i>
         </button>
       </div>
