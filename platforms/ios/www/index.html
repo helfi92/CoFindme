@@ -7,6 +7,7 @@
 
     <script src="lib/ionic/js/ionic.bundle.js"></script>
 
+    <script src="bower_components/ngCordova/dist/ng-cordova.js"></script>
     <!-- cordova script (this will be a 404 during development) -->
     <script src="cordova.js"></script>
 
@@ -18,16 +19,47 @@
     <script src="js/routes.js"></script>
     <script src="js/services.js"></script>
     <script src="js/directives.js"></script>
-    <script type="text/javascript" src="//platform.linkedin.com/in.js">
-      api_key:  NXiu5BpSt4X1R2Dk
+    <script src="js/profileController.js"></script>
+    <script type="text/javascript" src="http://platform.linkedin.com/in.js">
+      api_key: 771u0p20ttoai5
+      onLoad:  Linkedin.init
+      authorize:true
+    </script>
+    <script>
+
     </script>
 
-    <script src="js/profileController.js"></script>
+
+    <script>
+    window.Linkedin={};
+    window.Linkedin.init=function(response){
+      IN.Event.on("auth",function(){
+        IN.API.Profile("me").result(function(profiles){
+          console.log(profiles);
+        });
+      });
+      console.log('boom');
+    }
+    </script>
+
+    <script type="in/Login"></script>
+  <!--var ref = window.open('https://www.linkedin.com/uas/oauth2/authorization?response_type=code&client_id=771u0p20ttoai5&redirect_uri=http://localhost:8100/&state=987654321&scope=r_basicprofile', '_blank', 'location=no');
+  if (typeof String.prototype.startsWith != 'function') {
+      String.prototype.startsWith = function (str){
+          return this.indexOf(str) == 0;
+      };
+  }
+  ref.addEventListener('loadstart', function(event) {
+      if((event.url).startsWith("http://localhost:8100/")) {
+          requestToken = (event.url).split("code=")[1];
+          ref.close();
+      }
+  });
 
 
-
+</script>-->
   </head>
-  <body ng-app="app" animation="slide-left-right-ios7">
+  <body ng-app="app" animation="slide-left-right-ios7" class="platform-ios platform-cordova platform-webview">
   <div>
     <div>
         <ion-nav-bar class="bar-stable">

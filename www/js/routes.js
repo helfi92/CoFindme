@@ -7,9 +7,9 @@ angular.module('app.routes', [])
   // Set up the various states which the app can be in.
   // Each state's controller can be found in controllers.js
   $stateProvider
-    
-      
-        
+
+
+
     .state('tabsController.cameraTabDefaultPage', {
       url: '/page2',
       views: {
@@ -19,11 +19,11 @@ angular.module('app.routes', [])
         }
       }
     })
-        
-      
-    
-      
-        
+
+
+
+
+
     .state('tabsController.profilePage', {
       url: '/page3',
       views: {
@@ -33,11 +33,11 @@ angular.module('app.routes', [])
         }
       }
     })
-        
-      
-    
-      
-        
+
+
+
+
+
     .state('tabsController.cloudTabDefaultPage', {
       url: '/page4',
       views: {
@@ -47,39 +47,39 @@ angular.module('app.routes', [])
         }
       }
     })
-        
-      
-    
-      
+
+
+
+
     .state('tabsController', {
       url: '/page1',
       abstract:true,
       templateUrl: 'templates/tabsController.html'
     })
-      
-    
-      
-        
+
+
+
+
     .state('login', {
       url: '/page5',
       templateUrl: 'templates/login.html',
       controller: 'loginCtrl'
     })
-        
-      
-    
-      
-        
+
+
+
+
+
     .state('nameOfPerson', {
       url: '/page6',
       templateUrl: 'templates/nameOfPerson.html',
       controller: 'nameOfPersonCtrl'
     })
-        
-      
+
+
     ;
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/page1/page2');
+  $urlRouterProvider.otherwise('/page5');
 
 });

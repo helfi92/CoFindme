@@ -23,15 +23,26 @@
     <script type="text/javascript" src="http://platform.linkedin.com/in.js">
       api_key: 771u0p20ttoai5
       onLoad:  Linkedin.init
+      authorize:true
+    </script>
+    <script>
+
     </script>
 
-    
+
     <script>
     window.Linkedin={};
     window.Linkedin.init=function(response){
+      IN.Event.on("auth",function(){
+        IN.API.Profile("me").result(function(profiles){
+          console.log(profiles);
+        });
+      });
       console.log('boom');
     }
     </script>
+
+    <script type="in/Login"></script>
   <!--var ref = window.open('https://www.linkedin.com/uas/oauth2/authorization?response_type=code&client_id=771u0p20ttoai5&redirect_uri=http://localhost:8100/&state=987654321&scope=r_basicprofile', '_blank', 'location=no');
   if (typeof String.prototype.startsWith != 'function') {
       String.prototype.startsWith = function (str){

@@ -5,6 +5,10 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
+var requestToken = "";
+var accessToken = "";
+var clientId = "771u0p20ttoai5";
+var clientSecret = "NXiu5BpSt4X1R2Dk";
 angular.module('app', ['ionic', 'app.controllers', 'app.routes', 'app.services', 'app.directives','ngCordova'])
 
 .run(function($ionicPlatform) {
