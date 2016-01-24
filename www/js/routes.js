@@ -45,12 +45,12 @@ angular.module('app.routes', [])
 
 
 
-    .state('tabsController.cloudTabDefaultPage', {
+    .state('tabsController.about', {
       url: '/page4',
       views: {
         'tab3': {
-          templateUrl: 'templates/cloudTabDefaultPage.html',
-          controller: 'cloudTabDefaultPageCtrl'
+          templateUrl: 'templates/aboutPage.html',
+          controller: 'aboutCtrl'
         }
       }
     })
