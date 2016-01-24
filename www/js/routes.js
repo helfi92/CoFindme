@@ -8,7 +8,11 @@ angular.module('app.routes', [])
   // Each state's controller can be found in controllers.js
   $stateProvider
     
-      
+    .state('tabsController', {
+      url: '/page1',
+      abstract:true,
+      templateUrl: 'templates/tabsController.html'
+    })
         
     .state('tabsController.coFindPage', {
       url: '/page2',
@@ -19,16 +23,22 @@ angular.module('app.routes', [])
         }
       }
     })
-        
- 
-    
-      
-        
-    .state('tabsController.profilePage', {
-      url: '/page3',
+    .state('tabsController.profile', {
+      url: '/profile',
+      views: {
+        'tab1': {
+          templateUrl: 'templates/profilePage.html',
+          controller: 'profileCtrl'
+        }
+      }
+    })
+
+
+    .state('tabsController.editProfile', {
+      url: '/editProfile',
       views: {
         'tab2': {
-          templateUrl: 'templates/profilePage.html',
+          templateUrl: 'templates/testChild.html',
           controller: 'profileCtrl'
         }
       }
@@ -53,11 +63,7 @@ angular.module('app.routes', [])
       
     
       
-    .state('tabsController', {
-      url: '/page1',
-      abstract:true,
-      templateUrl: 'templates/tabsController.html'
-    })
+    
       
     
       

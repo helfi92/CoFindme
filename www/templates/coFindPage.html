@@ -14,8 +14,7 @@
         </div>
         <h4>Top 3 founders for you!</h4>
         <div class="list">
-            <a ng-repeat="item in users | filter:search"class="item item-avatar" href="#/page1/page2/{{item.id}}">
-                {{item.id}}
+            <a ng-click="userOnClick(item)" ng-repeat="item in users | filter:search" class="item item-avatar" href="#/page1/profile">
                 <img ng-src="{{item.imageUrl}}">
                 <h2>{{item.profession}}, (Marketing, Technical)</h2>
                 <small style="color:lightgrey;">
