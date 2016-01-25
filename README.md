@@ -1,9 +1,6 @@
 #CoFindMe
 
 I am currently looking for someone to start a company with. I am looking for someone that would complement my skills, where do I look? How do I know whether they share or complement my vision. Presently, there are no platforms to connect cofounders. Have an idea but need someone to complement your abilities?. CoFindme facilitates this process, you can connect using linkedin to automatically and quickly populate your profile. Write up a little paragraph with your vision, and search away looking for your second half. CoFinder is the place where you find minds like yours, CoFinder is a place where your dream begins.
-
-CoFindme specializes in the connection of technical cofounders. When interested in someone, you proceed by clicking the message button and this my friend, might be the start of a new life.
-
 ---
 
 This application includes both iOS and Android platforms.
