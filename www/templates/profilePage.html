@@ -8,13 +8,13 @@
 	          <img id="profile-image" ng-src="{{user.imageUrl}}">
 	          <h3 id="profile-name">{{user.firstName}}</h3>
 	          <h3><span ng-repeat="industry in user.industries">{{industry}}{{$last ? '' : ','}} </span></h3>
-	          <div id="profile-description">	          	
-	          	
+	          <div id="profile-description">
+
 	          	<div>{{user.location}}</div>
 
 	          </div>
-	          
-	         
+
+
 	      	</div>
         </div>
         <div id="skills-content">
@@ -25,7 +25,7 @@
 			    <i class="icon ion-ios-pricetag-outline"></i>
 			    {{item}}
 			    <span style="float:right;">
-					
+
 					10/10
 
 			    </span>
@@ -35,7 +35,7 @@
 			</div>
         </div>
         <div id="message-user">
-      	 	<button style="margin-top:1em;width:200px;"class="button button-calm text-center">Message</button>
+      	 	<button style="margin-top:1em;width:200px;" ng-class="sendMessage()" class="button button-calm text-center">Message</button>
   		</div>
 	</ion-content>
 </ion-view>

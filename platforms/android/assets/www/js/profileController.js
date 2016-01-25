@@ -1,4 +1,15 @@
-var ctrlApp=angular.module('app');
-ctrlApp.controller('profileCtrl', function($scope) {
-	console.log('profilePage');
-})
+
+var appCtrl = angular.module('app.controllers');
+
+appCtrl.controller('profileCtrl',['$scope','$http','user', function($scope,$http,user) {
+
+	$http.get('users.json').success(function(data) {
+    	$scope.users = data;
+  	});
+	
+
+	$scope.user = user.activeUser;
+
+	
+
+}]);

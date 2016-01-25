@@ -4,36 +4,43 @@
             <div class="button-bar"></div>
             <label class="item item-input">
                 <i class="icon ion-search placeholder-icon"></i>
-                <input ng-model="search.$" type="search" placeholder="">
+                <input id="searchText" ng-change="searchChanged(search.skills.$);" ng-model="search.skills.$" type="search" placeholder="">
             </label>
         </form>
+        <div  >
         <div class="button-bar"></div>
-        <div class="list card">
-            <div class="item item-divider">Filter</div>
-            <div class="item item-body">
-                <ion-list>
+        <div >
+          <div class="list card">
+            <a  ng-click="expandFilter()" class="item item-divider item-button-right">
+              Filter
+              <button ng-class="expandedIcon"   style="margin-top:-7px;margin-left:15px;font-size:20px"></button>
+            </a>
+            <div ng-class="expanded" class="item item-body">
+                <ion-list id="filters">
 
-                  <ion-checkbox ng-model="filter.blue">Front End</ion-checkbox>
-                  <ion-checkbox ng-model="filter.yellow">Graphic Designer</ion-checkbox>
-                  <ion-checkbox ng-model="filter.pink">Manager</ion-checkbox>
+                  <ion-checkbox ng-click="addFilter(item,check.blue)" ng-checked="industriesList.isChecked" ng-model="check.blue" ng-repeat="item in industriesList ">{{item.text}}</ion-checkbox>
+
 
                 </ion-list>
             </div>
+          </div>
         </div>
 
 
 
-        <div class="list">
-            <a ng-click="userOnClick(item)" ng-repeat="item in users | filter:search" class="item item-avatar" href="#/page1/profile">
+
+        <div class="list" ng-class="transition">
+            <a ng-click="userOnClick(item)" ng-repeat="item in users | filter:search.skills | filter : filterIndustries" class="item item-avatar" href="#/page1/profile">
                 <img ng-src="{{item.imageUrl}}">
-                <h2>{{item.profession}}, (Marketing, Technical)</h2>
+                <h2><span ng-repeat="industry in item.industries">{{industry}}{{$last ? '' : ','}} </span></h2>
                 <small style="color:lightgrey;">
                     <i class="ion-location"></i> {{item.location}}</small>
-                <p><span ng-repeat="skill in item.skills"> {{skill}} | </span></p>
+                <p><span ng-repeat="skill in item.skills"> {{skill}} {{$last ? '' : '|'}} </span></p>
             </a>
 
-            
+
         </div>
-       
+      </div>
+
     </ion-content>
 </ion-view>

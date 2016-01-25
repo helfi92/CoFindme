@@ -1,10 +1,12 @@
 angular.module('app.services', [])
 
-.factory('BlankFactory', [function(){
-
+.factory('user', [function(){
+	return {
+		activeUser : ''
+	}
 }])
 
-.service('BlankService', [function(){
+.service('me', [function(){
 
 }]);
 
