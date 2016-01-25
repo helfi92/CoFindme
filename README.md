@@ -5,6 +5,7 @@ I am currently looking for someone to start a company with. I am looking for som
 
 This application includes both iOS and Android platforms.
 
+![Alt text](https://raw.githubusercontent.com/helfi92/CoFindme/master/www/img/profileAndroidIos.png)
 
 ![Alt text](https://raw.githubusercontent.com/helfi92/CoFindme/master/www/img/1.png)
 
@@ -16,5 +17,3 @@ This application includes both iOS and Android platforms.
 
 
 ![Alt text](https://raw.githubusercontent.com/helfi92/CoFindme/master/www/img/4.png)
-
-
