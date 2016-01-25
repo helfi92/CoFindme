@@ -3,17 +3,12 @@ I am currently looking for someone to start a company with. I am looking for som
 
 ---
 
-This application includes both iOS and Android platforms.
 
-![Alt text](https://raw.githubusercontent.com/helfi92/CoFindme/master/www/img/profileAndroidIos.png)
-
+CoFindMe Login Page:
 ![Alt text](https://raw.githubusercontent.com/helfi92/CoFindme/master/www/img/1.png)
-
-
-![Alt text](https://raw.githubusercontent.com/helfi92/CoFindme/master/www/img/2.png)
-
-
-![Alt text](https://raw.githubusercontent.com/helfi92/CoFindme/master/www/img/3.png)
-
-
+This application includes both iOS and Android platforms:
+![Alt text](https://raw.githubusercontent.com/helfi92/CoFindme/master/www/img/profileAndroidIos.png)
+Search For Your Other Halves:
 ![Alt text](https://raw.githubusercontent.com/helfi92/CoFindme/master/www/img/4.png)
+Edit your profile and change your search preferences:
+![Alt text](https://raw.githubusercontent.com/helfi92/CoFindme/master/www/img/2.png)
